@@ -4,7 +4,7 @@
 //
 //  Created by zengwx on 2023/10/20.
 //
-
+#if os(macOS)
 import AppKit
 
 /// 在我的MacOS上，按一下shift键会产生4个事件序列（在极低概率情况下如下4个事件序列会不符合预期，2和3会错位，因为概率极低，所以暂不处理2和3错位的这种情况）：
@@ -51,3 +51,4 @@ public struct ShiftKey {
         return true
     }
 }
+#endif
