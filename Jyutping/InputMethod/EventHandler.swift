@@ -11,7 +11,7 @@ extension JyutpingInputController {
 
         override func handle(_ event: NSEvent!, client sender: Any!) -> Bool {
                 guard let event = event else { return false }
-                if AppSettings.pressShiftOnce == .switchCantoneseEnglish && ShiftKey.isShiftKeyTaped(event: event) {
+                if AppSettings.pressShiftOnce == .switchCantoneseEnglish && ShiftKey.isShiftKeyTapped(event: event) {
                         if Options.inputMethodMode == .cantonese {
                                 passBuffer()
                                 Options.updateInputMethodMode(to: .abc)
